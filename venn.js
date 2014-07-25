@@ -485,7 +485,7 @@
 
         return ret.join(" ");
     }
-    
+
     venn.drawD3Diagram = function(element, dataset, width, height, parameters) {
         parameters = parameters || {};
 
@@ -521,7 +521,7 @@
 
         var text = nodes.append("text")
                .attr("x", function(d) { return d.x; })
-               .attr("y", function(d) { return d.y; })
+               .attr("y", function(d) { return d.y - d.radius + 10; })
                .attr("text-anchor", "middle")
                .attr("dy", "0.35em")
                .style("stroke", function(d, i) { return textStrokeColours(i); })
